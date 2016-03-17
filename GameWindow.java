@@ -349,7 +349,7 @@ public class GameWindow extends JFrame implements ActionListener {
 
             GameMaster.advanceTurns(1);
             gameAreaPanel.remove(yourTurn);
-
+            checkUno();
          }
       }
 
