@@ -30,6 +30,7 @@ public class GameWindow extends JFrame implements ActionListener {
    private JPanel optionsPanel = new JPanel();
 
    JButton hideButton = new JButton("Hide Hand");
+   JButton rulesButton = new JButton("Rules");
    JButton drawButton = new JButton("Draw Card");
    JButton playButton = new JButton("Play Card");
    JButton unoButton = new JButton("Uno!");
@@ -109,11 +110,13 @@ public class GameWindow extends JFrame implements ActionListener {
       
       this.drawButton.addActionListener(this);
       this.hideButton.addActionListener(this);
+      this.rulesButton.addActionListener(this);
       this.playButton.addActionListener(this);
       this.unoButton.addActionListener(this);
       this.attackButton.addActionListener(this);
 
       optionsPanel.add(hideButton);
+      optionsPanel.add(rulesButton);
       optionsPanel.add(drawButton);
 
       everythingPanel.setLayout(new BoxLayout(everythingPanel, BoxLayout.PAGE_AXIS));
@@ -337,6 +340,11 @@ public class GameWindow extends JFrame implements ActionListener {
          repaint();
       }
 
+      if(event.getSource()  == rulesButton){
+         JOptionPane.showMessageDialog(null,"Rules\n1. You may play a card that matches type or color."+
+                                       "\n2. You must say Uno when you have one card left."+
+                                       "\n3. Skip and add cards don't stack.","Rules",JOptionPane.DEFAULT_OPTION);
+      }
       if(event.getSource() == hideButton){
          hideCards = !hideCards;
          updateDisplayHand(getPlayer().getHand());
