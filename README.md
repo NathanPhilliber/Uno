@@ -1,4 +1,7 @@
 PROJECT TITLE: Uno
+
 PURPOSE OF PROJECT: CPE102
+
 VERSION or DATE: 1.0 3-13-16
+
 AUTHORS: Nathan Philliber, Hansen Egbert
